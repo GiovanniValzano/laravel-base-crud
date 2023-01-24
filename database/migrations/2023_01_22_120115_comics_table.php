@@ -16,9 +16,12 @@ class ComicsTable extends Migration
     {
         Schema::create('comics', function (Blueprint $table) {
             $table->id();
-            $table->string('title', 50);
-            $table->string('description', 50);
-            $table->unsignedMediumInteger('price')->nullable();
+            $table->string('thumb',200);
+            $table->string('title');
+            $table->text('description');
+            $table->float('price');
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->nullable();
         });
     }
 

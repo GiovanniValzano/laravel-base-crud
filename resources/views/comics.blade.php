@@ -5,8 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Comics</title>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
-<body>
-    finito
-</body>
+    <body>
+        {{-- {{dd($comics)}} --}}
+        @foreach ($comics as $item)
+            <li>
+                <img src="{{$item->thumb}}" alt="">
+                <div>titolo : {{$item->title}}</div>
+                <div>descrizione : {{$item->description}}</div>
+                <div>prezzo : {{$item->price}}</div>
+            </li>
+        @endforeach
+    </body>
 </html>

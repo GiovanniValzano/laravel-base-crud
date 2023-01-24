@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ComicsController;
 use Illuminate\Support\Facades\Route;
+use App\Comics;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,7 @@ Route::get('/', function () {
     $home = config('menu');
     return view('comics',[
         'menu' => $home,
+        'comics' => Comics::all(),
     ]);
 });
 

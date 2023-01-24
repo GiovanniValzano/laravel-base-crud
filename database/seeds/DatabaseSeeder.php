@@ -1,9 +1,6 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Database\Seeds\ComicsSeeder;
-
-
 class DatabaseSeeder extends Seeder
 {
     /**
